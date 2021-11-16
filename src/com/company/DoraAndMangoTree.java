@@ -1,7 +1,7 @@
 package com.company;
 import java.util.Scanner;
 
-public class Main {
+public class DoraAndMangoTree {
 
     public static void main(String[] args) {
         // write your code here
@@ -18,7 +18,7 @@ public class Main {
         }
         else{
             if(treeNumber%col==0 || treeNumber%col==1 || treeNumber<col){
-                System.out.println("Yes, That's a mongo tree.");
+                System.out.println("Yes, That's a mango tree.");
             }else System.out.println("No, That's not a right choice.");
         }
 
