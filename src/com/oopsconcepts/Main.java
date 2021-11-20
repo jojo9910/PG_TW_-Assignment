@@ -19,9 +19,9 @@ public class Main {
         Movie [] movieArray=new Movie[size];
 
         for(int i=0;i<size;i++){
-            String randomTitle=getAlphaNumericString(5);
-            String randomStudio=getAlphaNumericString(5);
-            String randomRating=getAlphaNumericString(5);
+            String randomTitle=getAlphaNumericString(i+2);
+            String randomStudio=getAlphaNumericString(i+2);
+            String randomRating=getAlphaNumericString(i+2);
             movieArray[i]=new Movie(randomTitle,randomStudio,randomRating);
             System.out.println(movieArray[i].getMovieTitle()+" "+movieArray[i].getMovieStudio()+" "+movieArray[i].getMovieRating());
         }
