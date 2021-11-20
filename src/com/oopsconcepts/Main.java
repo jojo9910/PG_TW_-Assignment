@@ -19,10 +19,10 @@ public class Main {
         Movie [] movieArray=new Movie[size];
 
         for(int i=0;i<size;i++){
-            String randomMovieTitle=getAlphaNumericString(5);
-            String randomMovieStudio=getAlphaNumericString(5);
-            String randomMovieRating=getAlphaNumericString(5);
-            movieArray[i]=new Movie(randomMovieTitle,randomMovieStudio,randomMovieRating);
+            String randomTitle=getAlphaNumericString(5);
+            String randomStudio=getAlphaNumericString(5);
+            String randomRating=getAlphaNumericString(5);
+            movieArray[i]=new Movie(randomTitle,randomStudio,randomRating);
             System.out.println(movieArray[i].getMovieTitle()+" "+movieArray[i].getMovieStudio()+" "+movieArray[i].getMovieRating());
         }
 
@@ -31,10 +31,10 @@ public class Main {
     }
 
     // Java program generate a random AlphaNumeric String
-    static String getAlphaNumericString(int lengthOfString) {
+    static String getAlphaNumericString(int length) {
         String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvxyz";
         StringBuilder resultantString= new StringBuilder();
-        for (int i = 0; i < lengthOfString; i++) {
+        for (int i = 0; i < length; i++) {
             // generate a random number between 0 to AlphaNumericString variable length
             int index= (int)(AlphaNumericString.length() * Math.random());
             resultantString.append(AlphaNumericString.charAt(index));
