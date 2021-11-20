@@ -1,6 +1,4 @@
-package com.OOPSconcepts;
-import java.nio.charset.StandardCharsets;
-import java.util.Random;
+package com.oopsconcepts;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +20,7 @@ public class Main {
 
         for(int i=0;i<size;i++){
             String randomMovieTitle=getAlphaNumericString(5);
-            String randomMovieStudio=getAlphaNumericString(6);
+            String randomMovieStudio=getAlphaNumericString(5);
             String randomMovieRating=getAlphaNumericString(5);
             movieArray[i]=new Movie(randomMovieTitle,randomMovieStudio,randomMovieRating);
             System.out.println(movieArray[i].getMovieTitle()+" "+movieArray[i].getMovieStudio()+" "+movieArray[i].getMovieRating());
@@ -30,35 +28,16 @@ public class Main {
 
         System.out.println("filtered pg movies: "+Movie.getPg(movieArray));
 
-
     }
 
     // Java program generate a random AlphaNumeric String
-// using CharSet method
     static String getAlphaNumericString(int lengthOfString) {
-
-        // length is bounded by 256 Character
-        byte[] array = new byte[256];
-        new Random().nextBytes(array);
-
-        String randomString = new String(array, StandardCharsets.UTF_8);
-
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvxyz";
         StringBuilder resultantString= new StringBuilder();
-
-        // Append first 20 alphanumeric characters
-        // from the generated random String into the result
-        for (int k = 0; k < randomString.length(); k++) {
-
-            char ch = randomString.charAt(k);
-
-            if (((ch >= 'a' && ch <= 'z')
-                    || (ch >= 'A' && ch <= 'Z')
-                    || (ch >= '0' && ch <= '9'))
-                    && (lengthOfString > 0)) {
-
-                resultantString.append(ch);
-                lengthOfString--;
-            }
+        for (int i = 0; i < lengthOfString; i++) {
+            // generate a random number between 0 to AlphaNumericString variable length
+            int index= (int)(AlphaNumericString.length() * Math.random());
+            resultantString.append(AlphaNumericString.charAt(index));
         }
         return resultantString.toString();
     }

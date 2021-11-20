@@ -13,7 +13,7 @@ public class Main{
         h1.SetHolidayDay(4);
         h1.SetHolidayMonth("November");
 
-        System.out.println("check for same month holiday: "+Holiday.IsSameMonth(h1,h2));
+        System.out.println("check for same month holiday: "+h1.IsSameMonth(h2));
 
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the array size: ");

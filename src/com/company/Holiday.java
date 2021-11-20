@@ -22,8 +22,8 @@ public class Holiday {
     public int GetHolidayDay(){return this.holidayDate;}
     public String GetHolidayMonth(){return this.holidayMonth;}
 
-    public static boolean IsSameMonth(Holiday h1, Holiday h2) {
-        return h1.holidayMonth.equals(h2.holidayMonth);
+    public boolean IsSameMonth(Holiday other) {
+        return this.holidayMonth.equals(other.holidayMonth);
     }
     public static double avgDate(Holiday[] arr) {
         double avg = 0;
