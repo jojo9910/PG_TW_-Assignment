@@ -2,7 +2,7 @@ package com.exceptionhandling;
 import java.util.Scanner;
 import java.lang.Exception;
 
-public class HandlingDifferentExceptions {
+public class HandlingExceptions {
     static void solve(int [] arr) throws Exception
     {
         int ans=0;
