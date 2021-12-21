@@ -5,7 +5,7 @@ public class StudentRecord implements CollegeData,HostelData{
 
     @Override
     public void collegeDetail() {
-        System.out.println("College Name : DCSA");
+        System.out.println("College Name : D");
         System.out.println("College Grade : A");
         System.out.println("University of College : KUK");
     }

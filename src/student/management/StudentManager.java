@@ -1,22 +1,23 @@
 package student.management;
+
 import java.util.Scanner;
 
 public class StudentManager {
     public static void main(String[] args) {
 
-        StudentRecord s1=new StudentRecord();
-        while(true){
-        System.out.println("press 1: to add student into database: \n 2: to update student \n 3: to remove student: \n 4: to print a particular student detail \n 5: to print all student details: \n 6: to exit ");
+        StudentRecord s1 = new StudentRecord();
+        while (true) {
+            System.out.println("press 1: to add student into database: \n 2: to update student \n 3: to remove student: \n 4: to print a particular student detail \n 5: to print all student details: \n 6: to exit ");
 
-        int option;
-        Scanner sc = new Scanner(System.in);
-        option = sc.nextInt();
-        if(option==6) break;
+            int option;
+            Scanner sc = new Scanner(System.in);
+            option = sc.nextInt();
+            if (option == 6) break;
 
-        String registrationNumber;
-        String name;
-        String phoneNumber;
-        String major;
+            String registrationNumber;
+            String name;
+            String phoneNumber;
+            String major;
 
             switch (option) {
                 case 1 -> {
@@ -55,7 +56,7 @@ public class StudentManager {
                 }
                 case 5 -> s1.printAllStudentDetail();
             }
-    }
+        }
 
     }
 }
